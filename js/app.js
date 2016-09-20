@@ -28,4 +28,16 @@ var student=[
         this.students = student;
     });   
 
+    app.controller('PanelController',function(){        
+        
+        //init
+        this.tab=1;
+
+        this.selectTab = function(selectedTab){
+            this.tab = selectedTab;
+        };
+        this.isSelected = function(checkedTab){
+            return checkedTab === this.tab;
+        };
+    });
 })();
