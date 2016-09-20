@@ -1,15 +1,22 @@
 <html ng-app="myApp">
     <head>
         <title>Angular101</title>
+        <link rel="stylesheet" href="/css/bootstrap.css">
         <script src="/node_modules/angular/angular.js"></script>
+                
     </head>
     <body>
         <h1>This is Class {{"Angular" + "101"}}</h1>
 
         <div ng-controller="myController as c">
-            <p><span>Name: </span>{{c.student.name}}</p>
-            <p><span>City: </span>{{c.student.city}}</p>
-            <p><span>Age: </span>{{c.student.age}}</p>
+            <div ng-repeat="student in c.students">
+                <p><span>Name: </span>{{student.name}}</p>
+                <p><span>City: </span>{{student.city}}</p>
+                <p><span>Age: </span>{{student.age}}</p>
+                
+                <p ng-show="student.passed" class="alert alert-success" role="alert">Pass</p>
+            </div>
+            
         </div>
 
         <script src="/js/app.js"></script>
