@@ -5,6 +5,13 @@
     </head>
     <body>
         <h1>This is Class {{"Angular" + "101"}}</h1>
+
+        <div ng-controller="myController as c">
+            <p><span>Name: </span>{{c.student.name}}</p>
+            <p><span>City: </span>{{c.student.city}}</p>
+            <p><span>Age: </span>{{c.student.age}}</p>
+        </div>
+
         <script src="/js/app.js"></script>
     </body>
 </html>
