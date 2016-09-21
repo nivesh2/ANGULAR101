@@ -23,7 +23,7 @@ var student=[
 ];
 
 (function(){
-    var app = angular.module('myApp',[]);
+    var app = angular.module('myApp',['panelModule']);
     app.controller('myController',function(){
         this.students = student;
     });   
@@ -40,16 +40,5 @@ var student=[
         }
         
     });
-    app.controller('PanelController',function(){        
-        
-        //init
-        this.tab=1;
-
-        this.selectTab = function(selectedTab){
-            this.tab = selectedTab;
-        };
-        this.isSelected = function(checkedTab){
-            return checkedTab === this.tab;
-        };
-    });
+    
 })();
