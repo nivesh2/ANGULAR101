@@ -17,4 +17,18 @@
             return checkedTab === this.tab;
         };
     });
+    
+    app.controller('FormController',function(){
+        var that =this;
+
+        that.reviews = [];
+        that.review = {};
+
+        that.onSubmit = function(a){
+            that.reviews.push(a);
+            that.review = {};
+        }
+
+    });
+
 })();

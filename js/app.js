@@ -23,22 +23,9 @@ var student=[
 ];
 
 (function(){
-    var app = angular.module('myApp',['panelModule']);
+    var app = angular.module('myApp',['panelModule','myCustomDirectives']);
     app.controller('myController',function(){
         this.students = student;
-    });   
-    
-    app.controller('FormController',function(){
-        var that =this;
-        
-        that.reviews = [];
-        that.review = {};
-        
-        that.onSubmit = function(a){
-            that.reviews.push(a);
-            that.review = {};
-        }
-        
     });
     
 })();
