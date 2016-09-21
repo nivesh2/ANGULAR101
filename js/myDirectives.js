@@ -13,7 +13,7 @@
     app.directive('myDisplay', function() {
         return {
             restrict: 'E',
-            controller: 'myController',
+            controller: 'StudentController',
             controllerAs: 'ctrl',
             templateUrl: 'my-display.html'
         };

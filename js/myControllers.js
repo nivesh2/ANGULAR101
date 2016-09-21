@@ -3,7 +3,7 @@
 (function(){
     var app = angular.module('myControllers',['myCustomServices']);
     
-    app.controller('myController',['studentData',function(data){
+    app.controller('StudentController',['studentData',function(data){
         this.students = data;
     }]);
 })();
