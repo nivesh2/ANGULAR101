@@ -1,31 +1,10 @@
 'use strict';
 
-
-var student=[
-    {
-    name:'Sahil',
-    city:'Pathankot',
-    age:'23',
-    passed:true
-},
-{
-    name:'Rahul',
-    city:'Varanasi',
-    age:'24',
-    passed:true
-},
-{
-    name:'XYZ',
-    city:'Delhi',
-    age:'21',
-    passed:false
-}
-];
-
 (function(){
-    var app = angular.module('myApp',['panelModule','myCustomDirectives']);
-    app.controller('myController',function(){
-        this.students = student;
-    });
+    var app = angular.module('myApp',['panelModule','myCustomDirectives','myCustomServices']);
+    
+    app.controller('myController',['studentData',function(data){
+        this.students = data;
+    }]);
     
 })();
