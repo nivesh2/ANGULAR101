@@ -1,10 +1,6 @@
 'use strict';
 
 (function(){
-    var app = angular.module('myApp',['panelModule','myCustomDirectives','myCustomServices']);
-    
-    app.controller('myController',['studentData',function(data){
-        this.students = data;
-    }]);
+    var app = angular.module('myApp',['myControllers','panelModule','myCustomDirectives']);
     
 })();
