@@ -32,6 +32,30 @@
             <div ng-show="panel.isSelected(2)">
                 <h4>Reviews</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque praesentium reprehenderit harum, sit dolores culpa deserunt fugit distinctio, neque facere.</p>
+                <!--Creating forms-->
+                    <form name="myForm" class="form-inline" ng-controller="FormController as formCtrl"
+                        ng-submit="formCtrl.onSubmit(formCtrl.review)">
+                        <div class="row" ng-repeat="review in formCtrl.reviews">
+                            <div class="thumbnail col-md-4">
+                                <p><span>Name:</span>{{review.name}}</p>
+                                <p class="pull-right"><span>Star:</span>{{review.star}}</p>
+                                <p><span>Description:</span>{{review.desc}}</p>    
+                            </div>
+                            
+                        </div>
+                        <label for=star"">Rating</label>
+                        <select class="form-control" name="start" id="star" ng-model="formCtrl.review.star" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="name">Name: </label>
+                        <input class="form-control" type="text" name="name" ng-model="formCtrl.review.name" required/>
+                        <label for="desc">Description</label>
+                        <input class="form-control" type="text" name="desc" ng-model="formCtrl.review.desc" required/>
+                        <p> Form is {{myForm.$valid}} </p>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
             </div>
             <div ng-show="panel.isSelected(3)">
                 <h4>About</h4>
@@ -40,19 +64,7 @@
 
         </section>
 
-        <!--Creating forms-->
-        <form action="#">
-            <div>
-                <p>{{review.name}}</p>
-                <p>{{review.desc}}</p>
-                <p>{{review.star}}</p>
-            </div>
-            <select name="" id="">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-        </form>
+        
         
         <script src="/js/app.js"></script>
     </body>
