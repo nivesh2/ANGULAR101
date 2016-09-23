@@ -1,9 +1,12 @@
 'use strict';
 
 (function(){
-    var app = angular.module('myControllers',['myCustomServices']);
-    
-    app.controller('myController',['studentData',function(data){
+    angular
+        .module('myApp')
+        .controller('myController',myController);
+
+    myController.$inject = ['dataFactory'];
+    function myController(data){
         this.students = data;
-    }]);
+    }
 })();
