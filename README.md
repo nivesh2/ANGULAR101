@@ -1,6 +1,9 @@
 # ANGULAR101
-Exploring Angular 1.0
+Exploring Frontend Frameworks from ground zero.
+We shall cover:
+ - Angular 1.5.8
+ - Angular 2.0
+ - React
 
-This is a basic project with chronological commits adding up various angular 1 features one by one. 
-
+Beauty lies in the eys of the creator, thus here it lies in the chronological order of commits.
 >This is just a beginning for what's NEXT TO COME!

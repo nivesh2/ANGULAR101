@@ -1,9 +1,11 @@
 'use strict';
 
 (function(){
-    var app = angular.module('myCustomServices',[]);
+    angular
+        .module('myApp')    
+        .factory('dataFactory',dataFactory);
     
-    app.factory('studentData',function(){
+    function dataFactory(){
         var that = [
             {
             name:'Sahil',
@@ -26,6 +28,6 @@
         ]; 
         
         return that;
-    });
+    }
     
 })();

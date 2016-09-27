@@ -3,9 +3,11 @@
 
 // here the new module is attached to the root angular scope and thus is accessible for the dependency injection for other angular modules sharing same root scope
 (function(){
-    var app = angular.module('panelModule',[]);
+    angular.module('myApp')    
+        .controller('PanelController', PanelController)
+        .controller('FormController', FormController);
     
-    app.controller('PanelController',function(){        
+    function PanelController(){        
         
         //init
         this.tab=1;
@@ -16,9 +18,9 @@
         this.isSelected = function(checkedTab){
             return checkedTab === this.tab;
         };
-    });
-    
-    app.controller('FormController',function(){
+    }
+
+    function FormController(){
         var that =this;
 
         that.reviews = [];
@@ -29,6 +31,5 @@
             that.review = {};
         }
 
-    });
-
+    }
 })();
